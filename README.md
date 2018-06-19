@@ -6,8 +6,8 @@ Copyright (c) 2017 Igor Muchychka
 
 ```
 npm i -g ntl
-git clone git@github.com:mucsi96/nightwatch-cucumber-example.git
-cd nightwatch-cucumber-example
+git clone git@github.com:mucsi96/nightwatch-cucumber-test.git
+cd nightwatch-cucumber-test
 npm i
 ntl
 ```
