@@ -1,10 +1,12 @@
 const { client } = require('nightwatch-cucumber');
-const { Given, Then, When } = require('cucumber');
+const { Then, When } = require('cucumber');
 
 
-When(/^Change bet for the 2 points$/, () => {
+When(/^Change bet for the 2 points$/, () =>  {
     client
         .click('#betSpinUp')
+    var totalSpins = client.getText('span#credits')
+    console.log(totalSpins)
 });
 
 When(/^Play the round$/, () => {
@@ -12,8 +14,12 @@ When(/^Play the round$/, () => {
         .click('#spinButton')
 });
 
+Then(/^Verify the bet is changing$/, () => {
+    return client.expect.element('span#bet').text.to.contains('2')
+});
+
 
 Then(/^Verify total spins count$/, () => {
-    return client
-        .assert('#bet>span').contains(2)
+    var total = client.getText('span#credits')
+    return client.verify.containsText('span#credits', totalSpins -2|| total > totalSpins)
 });

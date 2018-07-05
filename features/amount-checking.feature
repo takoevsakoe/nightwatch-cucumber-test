@@ -5,4 +5,4 @@ Feature: Amount calculating
     Given As a player I open page with spin
     When I play until win
     Then Check that winning amount was changed
-    And  Check that amount was added to the total spins
+    And  Check that spin amount was added to the total spins

@@ -28,7 +28,7 @@ module.exports = {
         javascriptEnabled: true,
         acceptSslCerts: true,
         chromeOptions: {
-          args: ['incognito', 'headless', 'no-sandbox', 'disable-gpu']
+          args: ['incognito', 'no-sandbox', 'disable-gpu']
         }
       },
       selenium: {
